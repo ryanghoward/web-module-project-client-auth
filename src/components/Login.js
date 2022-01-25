@@ -22,7 +22,7 @@ const Login = () => {
     axios
       .post("http://localhost:9000/api/login", credentials)
       .then((resp) => {
-        console.log(resp);
+        // console.log(resp);
         localStorage.setItem("token", resp.data.payload);
         push("/friends");
       })
@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor='username'>Username: </label>
