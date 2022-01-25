@@ -24,7 +24,7 @@ const Login = () => {
       .then((resp) => {
         console.log(resp);
         localStorage.setItem("token", resp.data.payload);
-        push("/friends/");
+        push("/friends");
       })
       .catch((err) => {
         console.log(err);
@@ -48,7 +48,7 @@ const Login = () => {
             id='password'
           />
         </div>
-        <button>Login</button>
+        <button>LOGIN</button>
       </form>
     </div>
   );
